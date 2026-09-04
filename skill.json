@@ -1,0 +1,39 @@
+{
+  "name": "genpark-nlp-to-geojson-spatial-feature-compiler-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Natural language to validated GeoJSON FeatureCollection compiler synthesizing spatial coordinates and buffers.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "geospatial",
+  "tags": [
+    "atlas-new",
+    "mapbox",
+    "geojson",
+    "spatial-compiler",
+    "gis"
+  ],
+  "inputs": {
+    "query_text": {
+      "type": "string"
+    },
+    "center_lat": {
+      "type": "number"
+    },
+    "center_lng": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "compiler_job_id": {
+      "type": "string"
+    },
+    "geojson_schema_valid": {
+      "type": "boolean"
+    },
+    "feature_collection_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
